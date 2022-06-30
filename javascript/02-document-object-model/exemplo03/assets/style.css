@@ -1,11 +1,13 @@
-.title{
+.title , .title02{
     background-color: cornflowerblue;
     padding: 5px 15px;
     margin: 0 10px;
 }
+
 #row {
     display: flex;
 }
+
 #row .inside {
     border: 1px solid black;
     background-color: #00000030;
