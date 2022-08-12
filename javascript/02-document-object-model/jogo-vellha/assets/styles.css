@@ -1,0 +1,10 @@
+.line {
+    margin: 1rem;
+    text-align: center;
+}
+.pos {
+    display: inline-block;
+    border: 1px solid red;
+    padding: 2rem 2rem;
+    vertical-align: middle;
+}
