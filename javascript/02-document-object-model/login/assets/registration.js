@@ -55,3 +55,7 @@ document.querySelector("#show").addEventListener('click', ()=> {
     console.log(JSON.parse(user));
 });
 
+document.querySelector("#clear").addEventListener('click', ()=> {
+    let user = localStorage.clear();
+});
+

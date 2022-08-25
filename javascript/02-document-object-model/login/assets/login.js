@@ -19,6 +19,20 @@ password.addEventListener('blur',() => {
 
 let button = document.querySelector("#button");
 
-button.addEventListener('click', () => {
+document.querySelector("#form-login").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const arrayUser = [];
+    if(localStorage.getItem("users")){
+        const userLog = JSON.parse(localStorage.getItem("users"));
+        userLog.forEach((e) => {
+            arrayUser.push(e);
+        });
+    }
 
+    arrayUser.forEach((e) => {
+        console.log(e);
+        if(e.email === email.value && e.password === password.value){
+            console.log("achei email e senha");
+        }
+    });
 });
