@@ -25,3 +25,33 @@ password.addEventListener('focus',() => {
 password.addEventListener('blur',() => {
     password.style.borderColor = "#ccc";
 });
+
+document.querySelector("#form-registration").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const arrayUser = [];
+
+    if(localStorage.getItem("users")){
+        const userLog = JSON.parse(localStorage.getItem("users"));
+        console.log(userLog);
+        userLog.forEach((e) => {
+            arrayUser.push(e);
+        });
+    }
+
+    const user = {
+        name: name.value,
+        email: email.value,
+        password: password.value
+    };
+
+    arrayUser.push(user);
+    localStorage.setItem("users",JSON.stringify(arrayUser));
+    //console.log(JSON.stringify(arrayUser));
+
+});
+
+document.querySelector("#show").addEventListener('click', ()=> {
+    let user = localStorage.getItem('users');
+    console.log(JSON.parse(user));
+});
+
