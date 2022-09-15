@@ -1,6 +1,36 @@
 const pos = document.querySelectorAll(".pos");
 let play = 'X';
 
+let score = {
+    player01: "",
+    player02: "",
+    score01: 0,
+    score02: 0
+};
+
+window.addEventListener("load",() => {
+    if(localStorage.getItem("score")){
+        score = JSON.parse(localStorage.getItem("score"));
+        document.querySelector("#play01").value = score.player01;
+        document.querySelector("#play02").value = score.player02;
+        document.querySelector("#scorePlay01").innerHTML = score.score01;
+        document.querySelector("#scorePlay02").innerHTML = score.score02;
+        console.log(score);
+    }
+});
+
+document.querySelector("#play01").addEventListener("blur", () => {
+    score.player01 = document.querySelector("#play01").value;
+    localStorage.setItem("score",JSON.stringify(score));
+    console.log(score);
+});
+
+document.querySelector("#play02").addEventListener("blur", () => {
+    score.player02 = document.querySelector("#play02").value;
+    localStorage.setItem("score",JSON.stringify(score));
+    console.log(score);
+});
+
 function winner (bord, pos01, pos02, pos03,play){
     if(bord[pos01].innerHTML !== "" &&
         (bord[pos01].innerHTML === bord[pos02].innerHTML &&
@@ -8,11 +38,16 @@ function winner (bord, pos01, pos02, pos03,play){
         if(play === "X" ){
             const win = document.querySelector("#play01").value;
             document.querySelector(".winner").innerHTML = `Venceu - O - ${win}!`;
+            score.score01++;
+            document.querySelector("#scorePlay01").innerHTML = score.score01;
         } else {
             const win = document.querySelector("#play02").value;
             document.querySelector(".winner").innerHTML = `Venceu - X - ${win}!`;
+            score.score02++;
+            document.querySelector("#scorePlay02").innerHTML = score.score02;
         }
     }
+    localStorage.setItem("score",JSON.stringify(score));
 }
 
 pos.forEach((e,i, bord) => {
@@ -42,4 +77,12 @@ document.querySelector(".reset").addEventListener("click", () => {
         e.innerHTML = "";
     });
     document.querySelector(".winner").innerHTML = "";
+});
+
+document.querySelector("#resetScore").addEventListener("click", () => {
+    score.score01 = 0;
+    score.score02 = 0;
+    localStorage.setItem("score",JSON.stringify(score));
+    document.querySelector("#scorePlay01").innerHTML = 0;
+    document.querySelector("#scorePlay02").innerHTML = 0;
 });

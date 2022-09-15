@@ -1,6 +1,7 @@
 const name = document.querySelector("#name");
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
+const message = document.querySelector("#message");
 
 name.addEventListener('focus',() => {
     name.style.borderColor = "#4A5F6A";
@@ -28,14 +29,24 @@ password.addEventListener('blur',() => {
 
 document.querySelector("#form-registration").addEventListener("submit", async (e) => {
     e.preventDefault();
+    message.innerHTML = "";
     const arrayUser = [];
+    let find = false; // se achou ou não o e-mail...
 
     if(localStorage.getItem("users")){
         const userLog = JSON.parse(localStorage.getItem("users"));
         console.log(userLog);
         userLog.forEach((e) => {
+            if(e.email === email.value){
+                find = true; // flag
+            }
             arrayUser.push(e);
         });
+    }
+
+    if(find){
+        message.innerHTML = "Email já cadastrado!";
+        return;
     }
 
     const user = {

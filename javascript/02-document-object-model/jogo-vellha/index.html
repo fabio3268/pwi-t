@@ -7,12 +7,15 @@
     <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-<div>
-    Jogador 01 <input type="text" id="play01"> O
+<div class="line">
+    <div class="posScore">Jogador 01 - O <input type="text" id="play01"></div>
+    <div class="posScore" id="scorePlay01">0</div>
 </div>
-<div>
-    Jogador 02 <input type="text" id="play02"> X
+<div class="line">
+    <div class="posScore">Jogador 02 - X <input type="text" id="play02"></div>
+    <div class="posScore" id="scorePlay02">0</div>
 </div>
+
 <div class="line">
     <div class="pos"></div>
     <div class="pos"></div>
@@ -33,6 +36,9 @@
 </div>
 <div>
     <button class="reset">Reset</button>
+</div>
+<div>
+    <button id="resetScore">Reset Placar</button>
 </div>
 </body>
 </html>

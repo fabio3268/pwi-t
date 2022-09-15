@@ -8,3 +8,10 @@
     padding: 2rem 2rem;
     vertical-align: middle;
 }
+
+.posScore {
+    display: inline-block;
+    border: 1px solid red;
+    padding: 2rem 2rem;
+    vertical-align: middle;
+}
