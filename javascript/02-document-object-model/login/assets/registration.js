@@ -1,7 +1,6 @@
 const name = document.querySelector("#name");
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
-const message = document.querySelector("#message");
 
 name.addEventListener('focus',() => {
     name.style.borderColor = "#4A5F6A";
@@ -29,35 +28,34 @@ password.addEventListener('blur',() => {
 
 document.querySelector("#form-registration").addEventListener("submit", async (e) => {
     e.preventDefault();
-    message.innerHTML = "";
+    document.querySelector("#message").innerHTML = "";
     const arrayUser = [];
-    let find = false; // se achou ou não o e-mail...
-
-    if(localStorage.getItem("users")){
-        const userLog = JSON.parse(localStorage.getItem("users"));
-        console.log(userLog);
-        userLog.forEach((e) => {
-            if(e.email === email.value){
-                find = true; // flag
-            }
-            arrayUser.push(e);
-        });
-    }
-
-    if(find){
-        message.innerHTML = "Email já cadastrado!";
-        return;
-    }
-
     const user = {
         name: name.value,
         email: email.value,
-        password: password.value
+        password: password.value,
     };
+    if(localStorage.getItem("users")){
+        const users = JSON.parse(localStorage.getItem("users"));
+        console.log(users);
+        let find = false;
+        users.forEach((e) => {
+            // testa se já não está cadastrado na lista
+            if(e.email === email.value){
+                find = true;
+                document.querySelector("#message").innerHTML = "Email já cadastrado!";
+            }
+            arrayUser.push(e);
+        });
+        if(find === true)
+        {
+            return;
+        }
+        console.log(arrayUser);
+    }
 
     arrayUser.push(user);
     localStorage.setItem("users",JSON.stringify(arrayUser));
-    //console.log(JSON.stringify(arrayUser));
 
 });
 
@@ -69,4 +67,3 @@ document.querySelector("#show").addEventListener('click', ()=> {
 document.querySelector("#clear").addEventListener('click', ()=> {
     let user = localStorage.clear();
 });
-

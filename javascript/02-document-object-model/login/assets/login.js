@@ -21,18 +21,23 @@ let button = document.querySelector("#button");
 
 document.querySelector("#form-login").addEventListener("submit", async (e) => {
     e.preventDefault();
-    const arrayUser = [];
+    document.querySelector("#message").innerHTML = ``;
+    let find = false;
     if(localStorage.getItem("users")){
-        const userLog = JSON.parse(localStorage.getItem("users"));
-        userLog.forEach((e) => {
-            arrayUser.push(e);
+        const users = JSON.parse(localStorage.getItem("users"));
+        console.log(users);
+
+        users.forEach((e) => {
+            if(e.email === email.value && e.password === password.value){
+                document.querySelector("#message").innerHTML = `Olá, ${e.name}!`;
+                find = true;
+                return;
+            }
         });
     }
 
-    arrayUser.forEach((e) => {
-        console.log(e);
-        if(e.email === email.value && e.password === password.value){
-            console.log("achei email e senha");
-        }
-    });
+    if(!find){
+        document.querySelector("#message").innerHTML = `Email e/ou Senha não cadastrados!`;
+    }
+
 });
