@@ -1,4 +1,0 @@
-### Exercício 01 - Revisão
-> Levando em consideração o arquivo index.html e as ações do usuário, implemente em JavaScript as seguintes funcionalidades:
-- O usuário digita o nome de uma pessoal no input id="insertName", quando o botão id="insertBtn" for precionado, inclua em um vetor chamado vetNames o nome contido no input.
-- Depois o usuário tem a possibilidade de digitar no input id="searchName" um nome, quando ele pressionar o botão id="searchBtn", busque no vetor o nome digitado no input. Se encontrado, na div id="result", emita "Nome Encontrado!", caso contrário emita "Nome Não Encontrado!" 
