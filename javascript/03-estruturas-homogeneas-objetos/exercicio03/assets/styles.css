@@ -1,0 +1,43 @@
+nav {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    left: 0;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 200px;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin-bottom: 10px;
+}
+
+.menu li a {
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.main img {
+    max-width: 100%;
+    height: auto;
+}
+
+main {
+    box-sizing: border-box;
+    padding-left: 210px; /* 200px de width do menu + 20px de padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
