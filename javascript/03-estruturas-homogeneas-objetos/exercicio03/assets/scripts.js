@@ -1,4 +1,18 @@
-const itemsMenu = ["Home", "Quem Somos", "Serviços", "Portfólio", "Contato","Localização"];
+
+
+
+
+
+
+const itemsMenu = ["Home", "Quem Somos", "Serviços", "Portfólio", "Contato","Localização","Teste"];
+const menu = document.querySelector(".menu");
+
+function menuShow (item){
+    const itemsMenu = `<li>${item}</li>`;
+    menu.insertAdjacentHTML("beforeend",itemsMenu);
+}
+
+itemsMenu.forEach(menuShow);
 
 let intemsArrayObj = [
     {
