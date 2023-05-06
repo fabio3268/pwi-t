@@ -1,0 +1,13 @@
+span {
+    color: white;
+    padding: 5px 10px;
+}
+.fraca {
+    background-color: red;
+}
+.media {
+    background-color: orange;
+}
+.forte {
+    background-color: green;
+}
