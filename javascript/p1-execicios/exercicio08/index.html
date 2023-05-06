@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Produtos</title>
+    <link rel="stylesheet" type="text/css" href="assets/styles.css">
+    <script src="assets/scripts.js" async></script>
+</head>
+<body>
+<div class="container">
+    <div class="left">
+        <h2>Lista de Produtos</h2>
+        <ul id="list-products">
+            <li>
+                <h3>Produto 1</h3>
+                <p>Categoria 1</p>
+                <p>Preço: R$ 10,00</p>
+            </li>
+            <li>
+                <h3>Produto 2</h3>
+                <p>Categoria 2</p>
+                <p>Preço: R$ 20,00</p>
+            </li>
+            <li>
+                <h3>Produto 3</h3>
+                <p>Categoria 1</p>
+                <p>Preço: R$ 15,00</p>
+            </li>
+            <li>
+                <h3>Produto 4</h3>
+                <p>Categoria 3</p>
+                <p>Preço: R$ 30,00</p>
+            </li>
+        </ul>
+    </div>
+    <div class="center">
+        <h2>Filtrar por Categoria</h2>
+        <select id="category-select">
+            <option value="">Selecione uma categoria</option>
+            <option value="Categoria 2">Vestuário</option>
+            <option value="Categoria 3">Cama Mesa e Banho</option>
+        </select>
+    </div>
+    <div class="right">
+        <h2>Soma dos Produtos da Categoria Selecionada</h2>
+        <p id="total-price">R$ 0,00</p>
+    </div>
+</div>
+
+</body>
+</html>
