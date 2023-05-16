@@ -1,0 +1,74 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+/* Estilo das listas */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.books-list,
+.books-filterers {
+    width: 30%;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.books-list li,
+.books-filterers li {
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #f7f7f7;
+}
+
+.books-list li:hover,
+.books-filterers li:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+/* Estilo do select */
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Estilo das mensagens de erro */
+.error {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Estilo dos botões */
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3e8e41;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
