@@ -51,7 +51,6 @@ let booksList = [
     }
 ];
 
-
 function insertBooks(book) {
     //console.log(book)
     const bookList = document.querySelector("#books-list");
@@ -63,14 +62,20 @@ function insertBooks(book) {
 booksList.forEach(insertBooks);
 
 const selectFilter = document.querySelector("#status-filter");
+const ulListBooksFiltered = document.querySelector("#filtered-books-list");
+function insertBooksFiltered (book){
+    //console.log(book);
+    if(selectFilter.value === book.status){
+        const newBook = document.createElement("li");
+        newBook.textContent = `${book.title} - ${book.author} - ${book.status}`;
+        ulListBooksFiltered.insertAdjacentElement("beforeend",newBook);
+    }
+}
 
 function listBooksFiltered (){
-    console.log(selectFilter.value);
-    for(let i = 0; i < booksList.length; i++){
-        if(booksList[i].status === selectFilter.value){
-            console.log(booksList[i]);
-        }
-    }
+    //console.log(selectFilter.value);
+    ulListBooksFiltered.innerHTML = "";
+    booksList.forEach(insertBooksFiltered);
 }
 
 selectFilter.addEventListener("change", listBooksFiltered );
