@@ -50,3 +50,27 @@ let booksList = [
         status: "Disponível"
     }
 ];
+
+
+function insertBooks(book) {
+    //console.log(book)
+    const bookList = document.querySelector("#books-list");
+    const newBookLi = document.createElement("li");
+    newBookLi.innerHTML = `${book.title} - ${book.author} - ${book.status}`;
+    bookList.insertAdjacentElement("beforeend", newBookLi);
+}
+
+booksList.forEach(insertBooks);
+
+const selectFilter = document.querySelector("#status-filter");
+
+function listBooksFiltered (){
+    console.log(selectFilter.value);
+    for(let i = 0; i < booksList.length; i++){
+        if(booksList[i].status === selectFilter.value){
+            console.log(booksList[i]);
+        }
+    }
+}
+
+selectFilter.addEventListener("change", listBooksFiltered );

@@ -50,3 +50,22 @@ let booksList = [
         status: "Disponível"
     }
 ];
+
+function insertBooks(book){
+    const newBookDiv = document.createElement("div");
+    newBookDiv.innerHTML = `
+    <h2>${book.title}</h2>
+    <p>${book.author}</p>
+    <p>${book.status}</p>
+`;
+    if(book.status === "Disponível"){
+        newBookDiv.setAttribute("class", "card status disponivel");
+    }
+    else{
+        newBookDiv.setAttribute("class", "card status emprestado");
+    }
+
+    document.querySelector("body").insertAdjacentElement("beforeend",newBookDiv);
+}
+
+booksList.forEach(insertBooks);
