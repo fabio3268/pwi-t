@@ -11,6 +11,4 @@ const plans = [
     { name: 'Empresarial', price: 39.99, description: 'Pro + Armazenamento ilimitado' },
 ];
 
-const listPlans = document.querySelectorAll(".box");
-console.log(listPlans);
 
