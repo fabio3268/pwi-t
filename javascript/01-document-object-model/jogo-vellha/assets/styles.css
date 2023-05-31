@@ -1,0 +1,48 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #333333;
+}
+
+.players {
+    margin-bottom: 20px;
+}
+
+.players label, .players input {
+    margin: 5px;
+}
+
+#board {
+    margin: 0 auto;
+    width: 306px;
+    height: 306px;
+    background-color: #ffffff;
+    border: 3px solid #000000;
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000000;
+    font-size: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.cell:hover {
+    background-color: #e0e0e0;
+}
+
+#reset {
+    margin-top: 20px;
+}

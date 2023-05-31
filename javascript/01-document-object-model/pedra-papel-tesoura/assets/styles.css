@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.score {
+    margin-top: 20px;
+}
+
+.score h2 {
+    margin: 0;
+    color: #777;
+}
+
+.game {
+    margin-top: 50px;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.option {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.result {
+    display: none;
+}
+
+.result h2 {
+    margin: 0;
+    color: #777;
+}
+
+.message {
+    margin: 10px 0;
+    font-weight: bold;
+}
