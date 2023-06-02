@@ -61,4 +61,19 @@ const propertyList = [
     }
 ];
 
+//document.querySelector(".property-card")
 
+propertyList.forEach((property) => {
+    console.log(property);
+    const propertyListDiv = document.querySelector(".property-list");
+    const cardProperty = document.createElement("div");
+    cardProperty.setAttribute("class","property-card");
+    cardProperty.innerHTML = `
+            <img src="${property.image}" alt="${property.description}">
+            <div class="property-description">${property.description}</div>
+            <div class="property-category">${property.category}</div>
+            <div class="property-price">${property.price}</div>
+           `;
+    propertyListDiv.insertAdjacentElement("afterbegin",cardProperty);
+
+});

@@ -41,3 +41,23 @@ const itemList = [
     }
 ];
 
+const tbody = document.querySelector("tbody");
+
+
+
+itemList.forEach((product) => {
+    //console.log(product.description, product.price );
+    const line = document.createElement("tr");
+    line.innerHTML = `<td>${product.description}</td><td>${product.price}</td>`;
+    tbody.insertAdjacentElement("beforeend",line);
+});
+
+const buttonAverage = document.querySelector("#calculate-average");
+buttonAverage.addEventListener("click", () => {
+    let sum = 0;
+    itemList.forEach((product) => {
+        sum = sum + parseFloat(product.price);
+    });
+    console.log(`Soma dos preços: ${sum}`);
+    document.querySelector("#average-div").textContent = `${sum / itemList.length}`;
+});
