@@ -15,35 +15,35 @@ h1 {
     margin-bottom: 20px;
 }
 
-.movie-list {
+.property-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.movie-card {
+.property-card {
     width: 200px;
     margin-right: 20px;
     margin-bottom: 20px;
 }
 
-.movie-card img {
+.property-card img {
     width: 100%;
     height: auto;
 }
 
-.movie-card .movie-title {
+.property-card .movie-description {
     margin-top: 10px;
     font-size: 18px;
 }
 
-.movie-card .movie-genre {
+.property-card .property-category {
     margin-top: 5px;
     font-size: 14px;
     color: #888;
 }
 
-.movie-card .movie-year {
+.property-card .property-price {
     margin-top: 5px;
     font-size: 14px;
     color: #888;

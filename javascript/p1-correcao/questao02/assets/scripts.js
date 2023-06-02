@@ -1,57 +1,64 @@
-const moviesList = [
+const propertyList = [
     {
-        title: "Matrix",
-        genre: "Ficção",
-        year: 1999,
-        image : "assets/images/matrix.jpg"
+        description: "Linda casa na Zona Sul",
+        category: "Casa",
+        price: 1500000.00,
+        image: "assets/images/property01.jpg"
     },
     {
-        title: "O Poderoso Chefão",
-        genre: "Crime",
-        year: 1972,
-        image : "assets/images/o-poderoso-chefao.jpg"
+        description: "Apartamento com vista para o mar",
+        category: "Apartamento",
+        price: 800000.00,
+        image: "assets/images/property02.jpg"
     },
     {
-        title: "Interestelar",
-        genre: "Ficção",
-        year: 2014,
-        image : "assets/images/interestelar.jpg"
+        description: "Terreno amplo no centro da cidade",
+        category: "Terreno",
+        price: 500000.00,
+        image: "assets/images/property03.jpg"
     },
     {
-        title: "O Senhor dos Anéis: O Retorno do Rei",
-        genre: "Fantasia",
-        year: 2003,
-        image : "assets/images/senhor-dos-aneis.jpg"
+        description: "Casa térrea com jardim",
+        category: "Casa",
+        price: 1200000.00,
+        image: "assets/images/property04.jpg"
     },
     {
-        title: "Vingadores: Ultimato",
-        genre: "Ficção",
-        year: 2019,
-        image : "assets/images/vingadores.jpg"
+        description: "Apartamento luxuoso no bairro nobre",
+        category: "Apartamento",
+        price: 2000000.00,
+        image: "assets/images/property05.jpg"
     },
     {
-        title: "Cidade de Deus",
-        genre: "Drama",
-        year: 2002,
-        image : "assets/images/cidade-de-deus.jpg"
+        description: "Terreno com vista panorâmica",
+        category: "Terreno",
+        price: 700000.00,
+        image: "assets/images/property06.jpg"
     },
     {
-        title: "O Silêncio dos Inocentes",
-        genre: "Suspense",
-        year: 1991,
-        image : "assets/images/o-silencio-dos-inocentes.jpg"
+        description: "Casa com piscina e área de lazer",
+        category: "Casa",
+        price: 1800000.00,
+        image: "assets/images/property07.jpg"
     },
     {
-        title: "Titanic",
-        genre: "Romance",
-        year: 1997,
-        image : "assets/images/titanic.jpg"
+        description: "Apartamento moderno no centro histórico",
+        category: "Apartamento",
+        price: 950000.00,
+        image: "assets/images/property08.jpg"
     },
     {
-        title: "Batman: O Cavaleiro das Trevas",
-        genre: "Ação",
-        year: 2008,
-        image : "assets/images/batman.jpg"
+        description: "Terreno próximo à praia",
+        category: "Terreno",
+        price: 600000.00,
+        image: "assets/images/property09.jpg"
+    },
+    {
+        description: "Casa aconchegante em condomínio fechado",
+        category: "Casa",
+        price: 1350000.00,
+        image: "assets/images/property10.jpg"
     }
 ];
+
 

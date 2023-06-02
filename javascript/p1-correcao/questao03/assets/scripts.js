@@ -1,2 +1,2 @@
-let studentsList = [];
+let productsList = [];
 
