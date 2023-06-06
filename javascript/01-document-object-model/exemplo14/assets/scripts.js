@@ -20,15 +20,31 @@ divPlans.forEach((div, i) => {
     div.innerHTML = `
     <div class="name">${plans[i].name}</div>
         <div class="price">${plans[i].price}</div>
-        <div class="active">${plans[i].description}</div>
+        <div class="description">${plans[i].description}</div>
     `;
 });
 
-divPlans.forEach((div, i) => {
+/*divPlans.forEach((div, i) => {
     //console.log(div);
     div.addEventListener("click", (e) => {
         e.target.textContent = "OI";
         console.log(e.target);
         //e.target.remove();
     });
+});*/
+
+document.querySelectorAll(".box").forEach((div) => {
+
+    div.addEventListener("click", () => {
+
+        document.querySelectorAll(".box").forEach((div) => {
+            if(div.classList.contains("active")){
+                div.classList.remove("active");
+            }
+        });
+
+        div.classList.add("active");
+    });
+
 });
+
