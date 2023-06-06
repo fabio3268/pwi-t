@@ -77,3 +77,5 @@ propertyList.forEach((property) => {
     propertyListDiv.insertAdjacentElement("afterbegin",cardProperty);
 
 });
+
+
