@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <script src="assets/scripts.js" async></script>
+</head>
+<body>
+<div class="container">
+    <h1>Cadastro de Usuário</h1>
+
+    <div class="form-container">
+        <h2>Cadastre um novo usuário</h2>
+        <form id="user-form">
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="password">Senha:</label>
+                <input type="text" id="password" name="password">
+            </div>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+
+    <div class="users-container">
+        <h2>Lista de Usuários</h2>
+        <table id="users-table">
+            <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Ação</th>
+            </tr>
+            </thead>
+            <tbody id="users-list">
+            <!-- Aqui serão inseridos os usuários dinamicamente, comente a tr abaixo -->
+           <!-- <tr>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+                <td>
+                    <button id="removeUser" class="action-button">Remover</button>
+                </td>
+            </tr>-->
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
