@@ -19,16 +19,6 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>1</td>
-                <td>João Silva</td>
-                <td>joao@example.com</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Maria Souza</td>
-                <td>maria@example.com</td>
-            </tr>
             <!-- Adicione mais linhas conforme necessário -->
             </tbody>
         </table>

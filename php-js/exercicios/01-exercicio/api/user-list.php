@@ -7,4 +7,6 @@
         ['id' => 4, 'name' => 'Jane Doe', 'email' => 'jane@gmail.com', 'password' => '123456']
     ];
 
+    //var_dump($users);
+
     echo json_encode($users);
