@@ -22,3 +22,5 @@ $categoriesList = [
     ["id" => 19, "name" => "Viagens"],
     ["id" => 0, "name" => "Todos"]
 ];
+
+echo json_encode($categoriesList);

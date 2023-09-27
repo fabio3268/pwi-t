@@ -36,6 +36,32 @@ category.addEventListener("change",() => {
                 productList.appendChild(tr);
             });
         });
-    });;
+    });
 });
 
+const productName = document.querySelector("#productName");
+productName.addEventListener("keyup", () => {
+    if(productName.value.length < 3){
+        return;
+    }
+
+    const param = {
+        "name" : productName.value
+    };
+    const query = new URLSearchParams(param);
+    const urlProductsByName = `api/products-by-name.php?${query.toString()}`;
+
+    fetch(urlProductsByName, {method : "get"}).then((response) => {
+        response.json().then((products) => {
+            //console.log(products);
+            const productList = document.querySelector("#productList");
+            productList.innerHTML = '';
+            products.forEach((product) => {
+                console.log(product);
+                const tr = document.createElement("tr");
+                tr.innerHTML = `<td>${product.id}</td><td>${product.name}</td><td>${product.price}</td>`;
+                productList.appendChild(tr);
+            });
+        });
+    });
+});

@@ -3,7 +3,7 @@
 <head>
     <title>Login Form</title>
     <link rel="stylesheet" href="assets/styles.css">
-    <script src="assets/index-script.js" async></script>
+    <script src="assets/script.js" async></script>
 </head>
 <body>
 
@@ -13,10 +13,10 @@
         <label for="category">Categoria:</label>
         <select id="category">
             <!-- Os valores serão listados aqui via JavaScript -->
-            <option value="Roupas">Roupas</option>
-            <option value="Alimentos">Alimentos</option>
-            <option value="Móveis">Móveis</option>
-            <option value="Esportes">Esportes</option>
+            <!--            <option value="Roupas">Roupas</option>-->
+            <!--            <option value="Alimentos">Alimentos</option>-->
+            <!--            <option value="Móveis">Móveis</option>-->
+            <!--            <option value="Esportes">Esportes</option>-->
         </select>
         <label for="productName">Nome do Produto:</label>
         <input type="text" id="productName">
@@ -31,7 +31,7 @@
         </thead>
         <tbody id="productList">
         <!-- Os produtos serão listados aqui via JavaScript -->
-        <tr><td>2</td><td>TV</td><td>343</td></tr>
+        <!--<tr><td>2</td><td>TV</td><td>343</td></tr>-->
         </tbody>
     </table>
 </div>

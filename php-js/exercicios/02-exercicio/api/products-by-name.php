@@ -24,5 +24,15 @@ $arrayProducts = [
     ["id" => 21, "name" => "Feijão", "category_id" => 7, "price" => 15]
 ];
 
-// percorra o array dos produtos com foreach
-// utilize a função strpos que Encontra a posição da primeira ocorrência de uma string
+    $name = filter_input(INPUT_GET, 'name');
+
+    $response = [];
+
+    foreach ($arrayProducts as $product) {
+        if (strpos($product['name'], $name) !== false) {
+            //echo json_encode($product);
+            $response[] = $product;
+        }
+    }
+
+    echo json_encode($response);

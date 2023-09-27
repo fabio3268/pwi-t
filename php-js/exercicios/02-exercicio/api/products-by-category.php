@@ -25,3 +25,15 @@ $arrayProducts = [
 ];
 
 // percorra o array dos produtos com foreach buscado os produtos da categoria solicitada
+
+$idCategory = filter_input(INPUT_GET, "categoryId");
+
+$response = [];
+
+foreach ($arrayProducts as $product) {
+    if ($product["category_id"] == $idCategory) {
+        $response[] = $product;
+    }
+}
+
+echo json_encode($response);
