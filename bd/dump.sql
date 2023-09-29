@@ -1,5 +1,5 @@
-CREATE DATABASE  IF NOT EXISTS `db_company_3at` /*!40100 DEFAULT CHARACTER SET utf8mb3 */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `db_company_3at`;
+CREATE DATABASE  IF NOT EXISTS `db_company_2at` /*!40100 DEFAULT CHARACTER SET utf8mb3 */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `db_company_2at`;
 -- MySQL dump 10.13  Distrib 8.0.22, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: db_company_3at
