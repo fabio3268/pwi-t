@@ -19,16 +19,19 @@ $stmt->bindParam("name", $post["productName"]);
 $stmt->bindParam("price",$post["productPrice"]);
 $stmt->bindParam("category_id",$post["productCategory"]);
 $stmt->execute();
-if($stmt->rowCount() == 1){
-    $response = [
-        "type" => "success",
-        "message" => "Produto cadastrado com sucesso!"
-    ];
-}
-else {
+
+if($stmt->rowCount() != 1){
     $response = [
         "type" => "error",
         "message" => "Produto não cadastrado!"
     ];
+    echo json_encode($response);
+    exit;
 }
+
+$response = [
+   "type" => "success",
+   "message" => "Produto cadastrado com sucesso!"
+];
+
 echo json_encode($response);
