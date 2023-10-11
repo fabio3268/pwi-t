@@ -3,7 +3,7 @@
 <head>
     <title>Login Form</title>
     <link rel="stylesheet" href="assets/styles.css">
-    <script src="assets/script.js" async></script>
+    <script type="module" src="assets/script.js" async></script>
 </head>
 <body>
 
