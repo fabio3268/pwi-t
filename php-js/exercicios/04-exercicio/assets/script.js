@@ -67,8 +67,9 @@ const closeModalButton = document.querySelector(".close");
 const editForm = document.getElementById("edit-form");
 
 // Função para abrir a modal com dados do produto (vai receber por parâmetro o id do produto)
-function openModal() {
+function openModal(productId) {
     modal.style.display = "block";
+    console.log(productId);
 }
 
 // Fechar a modal ao clicar no botão de fechar
@@ -85,6 +86,7 @@ window.onclick = function(event) {
 
 tableProducts.addEventListener("click", (event) => {
     // mostrar no console o id do produto cliacado
-    console.log(event.target.parentNode.getAttribute("data-id"));
-    openModal();
+    //console.log(event.target.parentNode);
+    //console.log(event.target.parentNode.getAttribute("data-id"));
+    openModal(event.target.parentNode.getAttribute("data-id"));
 });
