@@ -1,6 +1,10 @@
 import {getCategories} from "./functions.js";
 
-getCategories();
+const selectCategories = document.querySelector("#category");
+const selectCategoriesModal = document.querySelector("#category_id");
+
+getCategories(selectCategories);
+getCategories(selectCategoriesModal);
 
 const category = document.querySelector("#category");
 category.addEventListener("change",() => {
@@ -70,6 +74,28 @@ const editForm = document.getElementById("edit-form");
 function openModal(productId) {
     modal.style.display = "block";
     console.log(productId);
+    const urlGetProdutc = `api/product-get.php?productId=${productId}`;
+    const options = {
+        method : "get"
+    };
+
+    fetch(urlGetProdutc, options).then((response) => {
+        response.json().then((product) => {
+            console.log(product);
+            const id = document.querySelector("#id");
+            id.value = product.id;
+
+            const name = document.querySelector("#name");
+            name.value = product.name;
+
+            const price = document.querySelector("#price");
+            price.value = product.price;
+
+            const categoryId = document.querySelector("#category_id");
+            categoryId.value = product.category_id;
+        })
+    });
+
 }
 
 // Fechar a modal ao clicar no botão de fechar
@@ -89,4 +115,23 @@ tableProducts.addEventListener("click", (event) => {
     //console.log(event.target.parentNode);
     //console.log(event.target.parentNode.getAttribute("data-id"));
     openModal(event.target.parentNode.getAttribute("data-id"));
+});
+
+const formSave = document.querySelector("form");
+
+formSave.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const data = new FormData(formSave);
+    const urlUpdateProduct = `api/product-update.php`;
+    const options = {
+        method: "post",
+        body : data
+    };
+
+    fetch(urlUpdateProduct, options).then((response) => {
+        response.json().then((product) => {
+            console.log(product);
+        });
+    });
+
 });

@@ -35,27 +35,24 @@
         </tbody>
     </table>
 </div>
-
 <!-- Modal para editar produto -->
 <div id="edit-modal" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
         <h2>Editar Produto</h2>
         <form id="edit-form">
-            <input type="hidden" id="productId" name="productId">
-            <label for="productName">Nome do Produto:</label>
-            <input type="text" id="productName" name="productName">
-            <label for="productPrice">Preço:</label>
-            <input type="number" id="productPrice" name="productPrice" step="0.01">
-            <label for="productCategory">Categoria:</label>
-            <select id="productCategory" name="productCategory">
+            <input type="hidden" id="id" name="id">
+            <label for="name">Nome do Produto:</label>
+            <input type="text" id="name" name="name">
+            <label for="price">Preço:</label>
+            <input type="text" id="price" name="price">
+            <label for="category_id">Categoria:</label>
+            <select id="category_id" name="category_id">
                 <option value="">Selecione uma Categoria</option>
             </select>
-            <button type="submit">Salvar</button>
+            <button id="save" type="submit">Salvar</button>
         </form>
     </div>
 </div>
-
 </body>
 </html>
-
