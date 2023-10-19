@@ -1,18 +1,17 @@
 const tableBooks = document.querySelector("table");
 
 // Seletor para a modal
-const modal = document.getElementById("edit-modal");
+const modal = document.querySelector("#edit-modal");
 
 // Seletor para o botão de fechar a modal
 const closeModalButton = document.querySelector(".close");
 
 // Seletor para o formulário de edição
-const editForm = document.getElementById("edit-form");
+const editForm = document.querySelector("#edit-form");
 
 // Função para abrir a modal com dados do produto (vai receber por parâmetro o id do produto)
-function openModal(bookId) {
+function openModal() {
     modal.style.display = "block";
-    console.log(bookId);
 }
 
 // Fechar a modal ao clicar no botão de fechar
@@ -28,8 +27,13 @@ window.onclick = function(event) {
 };
 
 tableBooks.addEventListener("click", (event) => {
-    // mostrar no console o id do produto cliacado
-    //console.log(event.target.parentNode);
-    //console.log(event.target.parentNode.getAttribute("data-id"));
-    openModal(event.target.parentNode.getAttribute("data-id"));
+
+    if(event.target.tagName === "TD"){
+        console.log(`Mostrar: ${event.target.parentNode.getAttribute("data-id")}`);
+        openModal();
+    }
+
+    if(event.target.tagName === "BUTTON"){
+        console.log(`Apagar: ${event.target.parentNode.parentNode.getAttribute("data-id")}`);
+    }
 });

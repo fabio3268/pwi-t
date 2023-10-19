@@ -28,8 +28,11 @@
         </tr>
         </thead>
         <tbody id="bookList">
-        <tr>
-            <td>2</td><td>Título</td><td>Preço</td><td><button>X</button></td>
+        <tr data-id="2">
+            <td>2</td>
+            <td>Título</td>
+            <td>Preço</td>
+            <td><button>X</button></td>
         </tr>
         </tbody>
     </table>
@@ -40,15 +43,15 @@
         <span class="close">&times;</span>
         <h2>Editar Livro</h2>
         <form id="edit-form">
-            <input type="hidden" id="bookId" name="bookId">
+            <input type="hidden" id="id" name="id">
             <label for="title">Título:</label>
             <input type="text" id="title" name="title">
-            <label for="category">Categoria:</label>
-            <select id="category" name="category">
+            <label for="category_id">Categoria:</label>
+            <select id="category_id" name="category_id">
                 <option value="">Selecione uma Categoria</option>
             </select>
-            <label for="category">Autor:</label>
-            <select id="author" name="author">
+            <label for="author_id">Autor:</label>
+            <select id="author_id" name="author_id">
                 <option value="">Selecione um Author</option>
             </select>
             <label for="price">Preço:</label>
