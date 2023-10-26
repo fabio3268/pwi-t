@@ -30,12 +30,12 @@
         </tr>
         </thead>
         <tbody id="bookList">
-        <tr data-id="2">
+        <!--<tr data-id="2">
             <td>2</td>
             <td>Título</td>
             <td>Preço</td>
             <td><button>X</button></td>
-        </tr>
+        </tr>-->
         </tbody>
     </table>
 </div>

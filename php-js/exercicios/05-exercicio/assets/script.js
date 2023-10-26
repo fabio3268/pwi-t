@@ -30,12 +30,34 @@ window.addEventListener("click", (event) => {
 
 tableBooks.addEventListener("click", (event) => {
     if(event.target.tagName === "TD"){
-        console.log(`Mostrar: ${event.target.parentNode.getAttribute("data-id")}`);
+        console.log(`Mostrar: ${event.target.parentNode.getAttribute("book-id")}`);
+        const urlGetBook = `api/book-get.php?bookId=${event.target.parentNode.getAttribute("book-id")}`;
+        fetch(urlGetBook).then((response) => {
+            response.json().then((book) => {
+                // console.log(book);
+                // preencher o formulário com os dados do livro
+                editForm.id.value = book.id;
+                editForm.title.value = book.title;
+                editForm.category_id.value = book.category_id;
+                editForm.author_id.value = book.author_id;
+                editForm.price.value = book.price;
+            });
+        });
         openModal();
     }
 
     if(event.target.tagName === "BUTTON"){
-        console.log(`Apagar: ${event.target.parentNode.parentNode.getAttribute("data-id")}`);
+        console.log(`Apagar: ${event.target.parentNode.parentNode.getAttribute("book-id")}`);
+        const urlDeleteBook = `api/book-delete.php?bookId=${event.target.parentNode.parentNode.getAttribute("book-id")}`;
+        fetch(urlDeleteBook).then((response) => {
+            response.json().then((data) => {
+                //console.log(data.type);
+                if(data.type == "success"){
+                    event.target.parentNode.parentNode.remove();
+                    console.log(data);
+                }
+            });
+        });
     }
 });
 
@@ -68,17 +90,22 @@ selectCategories.addEventListener("change", () => {
     const urlBooksByCategory = `api/books-by-category.php?category_id=${selectCategories.value}`;
     fetch(urlBooksByCategory, optionsGet).then((response) => {
         response.json().then((books) => {
-            console.log(books);
+            //console.log(books);
             const tableBooks = document.querySelector("#bookList");
+            // limpa a tabela
+            tableBooks.innerHTML = "";
             books.forEach((book) => {
+                //console.log(book);
                 const tr = document.createElement("tr");
+                tr.setAttribute("book-id", book.id);
                 // parei aqui
                 tr.innerHTML = `
-                <td>2</td>
-                <td>Título</td>
-                <td>Preço</td>
+                <td>${book.id}</td>
+                <td>${book.title}</td>
+                <td>${book.price}</td>
                 <td><button>X</button></td>
                 `;
+                tableBooks.appendChild(tr);
             });
         });
     });
