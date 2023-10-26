@@ -64,3 +64,22 @@ fetch(urlGetAuthors, optionsGet).then((response) => {
     });
 });
 
+selectCategories.addEventListener("change", () => {
+    const urlBooksByCategory = `api/books-by-category.php?category_id=${selectCategories.value}`;
+    fetch(urlBooksByCategory, optionsGet).then((response) => {
+        response.json().then((books) => {
+            console.log(books);
+            const tableBooks = document.querySelector("#bookList");
+            books.forEach((book) => {
+                const tr = document.createElement("tr");
+                // parei aqui
+                tr.innerHTML = `
+                <td>2</td>
+                <td>Título</td>
+                <td>Preço</td>
+                <td><button>X</button></td>
+                `;
+            });
+        });
+    });
+});
