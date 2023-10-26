@@ -1,8 +1,8 @@
 <?php
 
-$host = "mysql";
+$host = "mysql"; // na escola trocar para localhost
 $user = "root";
-$password = "asdf1234"; // trocar a senha
+$password = "asdf1234"; // na escola sem senha
 $database = "db_book_store_tarde";
 $port = 3306;
 $options = [
