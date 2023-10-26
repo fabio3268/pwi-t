@@ -17,7 +17,6 @@ function openModal() {
 }
 
 // Fechar a modal ao clicar no botão de fechar
-
 closeModalButton.addEventListener("click", () => {
     modal.style.display = "none";
 });

@@ -1,8 +1,8 @@
 <?php
 
-$host = "localhost";
+$host = "mysql";
 $user = "root";
-$password = "12345"; // trocar a senha
+$password = "asdf1234"; // trocar a senha
 $database = "db_book_store_tarde";
 $port = 3306;
 $options = [
@@ -10,9 +10,8 @@ $options = [
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
 ];
 
-$conn = new PDO(
-    "mysql:host=$host;port=$port;dbname=$database",
-    $user,
-    $password,
-    $options
-);
+try {
+    $conn = new PDO("mysql:host=$host;port=$port;dbname=$database", $user, $password, $options);
+} catch (PDOException $e) {
+    echo "Erro de conexão: " . $e->getMessage();
+}
