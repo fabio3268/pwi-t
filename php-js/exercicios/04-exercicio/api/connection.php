@@ -1,9 +1,9 @@
 <?php
 
-$host = "localhost";
+$host = "mysql";
 $user = "root";
-$password = "12345";
-$database = "db_company_3at";
+$password = "asdf1234";
+$database = "db_company_2at";
 $port = 3306;
 $options = [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
@@ -17,12 +17,9 @@ $conn = new PDO(
     $options
 );
 
-//var_dump($conn);
-
-//$query = "SELECT * FROM categories";
-//$stmt = $conn->query($query);
-
-//var_dump($stmt->fetchAll());
-
-///echo json_encode($stmt->fetchAll(), JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+try {
+    $conn = new PDO("mysql:host=$host;port=$port;dbname=$database", $user, $password, $options);
+} catch (PDOException $e) {
+    echo "Erro de conexão: " . $e->getMessage();
+}
 
