@@ -3,7 +3,7 @@
 $host = "mysql"; // na escola trocar para localhost
 $user = "root";
 $password = "asdf1234"; // na escola sem senha
-$database = "db_book_store_tarde";
+$database = "social_network";
 $port = 3306;
 $options = [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,

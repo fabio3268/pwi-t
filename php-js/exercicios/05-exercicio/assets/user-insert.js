@@ -17,3 +17,13 @@ form.addEventListener("submit",  (event) => {
     });
 
 });
+
+/*
+
+const query = new URLSearchParams({
+    foo: 'bar',
+    num: 10,
+}).toString();
+const url = `aula.php?${query}`;
+console.log(url);
+ */
