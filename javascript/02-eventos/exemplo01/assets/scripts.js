@@ -17,3 +17,8 @@ function changeText () {
 }
 
 buttonClick.addEventListener("click",changeText);
+
+buttonReset.addEventListener("click", () => {
+    count = 0;
+    divCount.textContent = `Contador: ${count}`;
+});
