@@ -1,0 +1,26 @@
+.number, .odd {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.even, .odd div {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 50%;
+    text-align: center;
+}
+
+.even {
+    background-color: blue;
+}
+
+.odd div {
+    background-color: red;
+}
