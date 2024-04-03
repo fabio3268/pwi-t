@@ -27,13 +27,3 @@ const employeesArrayObj = [
         salary : 17000.00
     }
 ];
-
-function showEmployees (employee){
-    console.log(employee.name, employee.age);
-    const div = document.createElement("div");
-    console.log(div);
-    div.innerHTML = `<span>${employee.name}</span>
-                     <span>${employee.age}</span>`;
-    document.body.insertAdjacentElement("beforeend",div);
-}
-employeesArrayObj.forEach(showEmployees);
