@@ -9,9 +9,9 @@ var report = [
 
 console.log(report);
 
-report[0][0] = 10;
+//report[0][0] = 10;
 console.log(report[0][0]); // L C
-report[0][1] = 10;
+//report[0][1] = 10;
 console.log(report[0][1]);
 
 console.table(report);
@@ -31,8 +31,19 @@ for(let c = 0; c <= 2; c++){
 }*/
 
 
-/*for(let c = 0; c <= 2; c++){
-    for(let l = 0; l <= 1; l++){
+const trFirst = document.querySelector("#first");
+const trSecond = document.querySelector("#second");
+
+for(let l = 0; l <= 1; l++){
+    for(let c = 0; c <= 2; c++){
         console.log(report[l][c]);
+        const td = document.createElement("td");
+        td.textContent = report[l][c];
+        console.log(td);
+        if(l == 0) {
+            trFirst.appendChild(td);
+        } else {
+            trSecond.appendChild(td);
+        }
     }
-}*/
+}

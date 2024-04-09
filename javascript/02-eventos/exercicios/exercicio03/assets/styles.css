@@ -44,5 +44,25 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #0de40d;
 }
+
+.delete {
+    background-color: #f10719; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+}
+
+.delete:hover {
+    background-color: #c82333;
+}
+
