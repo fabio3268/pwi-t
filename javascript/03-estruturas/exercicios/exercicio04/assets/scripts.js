@@ -8,4 +8,4 @@ const table = [
     [3,4,5]
 ];
 
-console.table(table);
+console.table();
