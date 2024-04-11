@@ -6,4 +6,15 @@
 100 200 300 400
 1 2 2 4
 
-- agora mostre somente os valores da linha 0, utilize para isso uma estrutura de repetição, na <table> <tr> <td>
+- agora mostre somente os valores da linha 0, utilize para isso uma estrutura de repetição, na estrutura
+
+````HTML
+<table>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+````
