@@ -41,6 +41,20 @@ body {
     background-color: #45a049;
 }
 
+.user button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f10719;
+    color: white;
+    cursor: pointer;
+}
+
+.user button:hover {
+    background-color: #e18a92;
+}
+
 .list-users {
     display: flex;
     flex-direction: column;
