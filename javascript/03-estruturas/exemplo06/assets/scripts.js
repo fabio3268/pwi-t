@@ -15,10 +15,10 @@ button.addEventListener("click", () => {
         const divUser = document.createElement("div");
         divUser.classList.add("user");
         console.log(index, value.name,value.email,value.password);
-        divUser.innerHTML = `<span>1</span>
-                             <span>Nome</span>
-                             <span>Email</span>
-                             <span>Senha</span>
+        divUser.innerHTML = `<span>${index}</span>
+                             <span>${value.name}</span>
+                             <span>${value.email}</span>
+                             <span>${value.password}</span>
                              <span><button>Excluir</button></span>`;
         divUsers.appendChild(divUser);
     });
@@ -27,6 +27,7 @@ button.addEventListener("click", () => {
 
 divUsers.addEventListener("click", (event) => {
     if(event.target.tagName === "BUTTON"){
+        // remover da lista de objetos
         event.target.parentElement.parentElement.remove();
     }
 });
