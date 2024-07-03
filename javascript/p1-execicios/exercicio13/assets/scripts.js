@@ -54,8 +54,7 @@ const tasksList = [
 const divTaskList = document.querySelector("#task-list");
 
 function createListTask () {
-    let i;
-    for(i in tasksList){
+    for(let i in tasksList){
         //console.log(tasksList[i].description, tasksList[i].status);
         let divTask = document.createElement("div");
         divTask.setAttribute("class","task");

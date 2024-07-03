@@ -51,31 +51,32 @@ let booksList = [
     }
 ];
 
-function insertBooks(book) {
-    //console.log(book)
-    const bookList = document.querySelector("#books-list");
-    const newBookLi = document.createElement("li");
-    newBookLi.innerHTML = `${book.title} - ${book.author} - ${book.status}`;
-    bookList.insertAdjacentElement("beforeend", newBookLi);
+const ulBooks = document.querySelector("#books-list");
+const ulBooksFiltered = document.querySelector("#filtered-books-list");
+const selectStatus = document.querySelector("#status-filter");
+
+function insertBooks (e) {
+    //console.log(e);
+    const li = document.createElement("li");
+    li.textContent = `${e.title} - ${e.author} - ${e.status}`;
+    ulBooks.insertAdjacentElement("beforeend",li);
 }
 
 booksList.forEach(insertBooks);
 
-const selectFilter = document.querySelector("#status-filter");
-const ulListBooksFiltered = document.querySelector("#filtered-books-list");
-function insertBooksFiltered (book){
-    //console.log(book);
-    if(selectFilter.value === book.status){
-        const newBook = document.createElement("li");
-        newBook.textContent = `${book.title} - ${book.author} - ${book.status}`;
-        ulListBooksFiltered.insertAdjacentElement("beforeend",newBook);
+function insertBooksSelected (e){
+    console.log("oi");
+    if(e.status === selectStatus.value){
+        const li = document.createElement("li");
+        li.textContent = `${e.title} - ${e.author} - ${e.status}`;
+        ulBooksFiltered.insertAdjacentElement("afterbegin",li);
     }
 }
 
-function listBooksFiltered (){
-    //console.log(selectFilter.value);
-    ulListBooksFiltered.innerHTML = "";
-    booksList.forEach(insertBooksFiltered);
+function insertBooksFiltered (){
+    console.log(selectStatus.value);
+    ulBooksFiltered.innerHTML = "";
+    booksList.forEach(insertBooksSelected);
 }
 
-selectFilter.addEventListener("change", listBooksFiltered );
+selectStatus.addEventListener("change", insertBooksFiltered);

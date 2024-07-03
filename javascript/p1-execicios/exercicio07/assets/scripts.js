@@ -40,3 +40,7 @@ const projectsList = [
         status: "Em andamento"
     }
 ];
+
+document.querySelector(".filter-section").addEventListener("change",() => {
+    console.log("OI");
+});

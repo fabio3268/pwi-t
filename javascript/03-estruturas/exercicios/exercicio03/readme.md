@@ -1,6 +1,6 @@
 ### Exercício 03
 
-- Crie uma matriz chamada tableNumbers com a seguinte composição de valores
+ - Crie uma matriz chamada tableNumbers com a seguinte composição de valores
 
 20 30 40 50
 100 200 300 400

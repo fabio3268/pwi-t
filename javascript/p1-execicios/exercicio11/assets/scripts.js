@@ -1,24 +1,16 @@
+const productName = document.querySelector("#productName");
+const productPrice = document.querySelector("#productPrice");
+const buttonInsert = document.querySelector("button");
 let productList = [];
-// 1)
-const inputProduct = document.querySelector("#productName");
-const inputPrice = document.querySelector("#productPrice");
-const button = document.querySelector("button");
-// 3)
+
 function insertProduct () {
-    console.log(inputProduct.value, inputPrice.value );
-    let product = {
-        name : inputProduct.value,
-        price : parseFloat(inputPrice.value)
-    };
-    productList.push(product);
+    //console.log(productName.value, productPrice.value);
+    let newProduct = {
+        name : productName.value,
+        price : parseInt(productPrice.value)
+    }
+    productList.push(newProduct);
     console.log(productList);
 }
 
-// 2)
-button.addEventListener("click",insertProduct);
-
-inputProduct.addEventListener("input", () => {
-    console.log(inputProduct.value);
-});
-
-
+buttonInsert.addEventListener("click",insertProduct);

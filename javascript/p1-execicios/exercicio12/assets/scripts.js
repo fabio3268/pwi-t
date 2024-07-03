@@ -56,5 +56,3 @@ function expensiveCalc () {
 btnAverage.addEventListener("click", averageCalc);
 
 btnExpensive.addEventListener("click", expensiveCalc)
-
-

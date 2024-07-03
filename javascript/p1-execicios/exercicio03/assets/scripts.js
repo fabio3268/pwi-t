@@ -1,23 +1,19 @@
 const arrayFruits = ['batata','laranja','morango','abacaxi'];
-const inputFruit = document.querySelector('#fruit');
-const btnSearchFruit = document.querySelector('button');
-const spanResult = document.querySelector('.resultSearch');
 
-/*function searchFruits (fruit, index, array) {
-    console.log("oi " + fruit);
-    if(fruit === inputFruit.value) {
-        spanResult.innerHTML = 'Encontrado';
-    }
-}*/
+const inputFruit = document.querySelector("#fruit");
+const button = document.querySelector("button");
 
-function clickSearchFruits () {
-    /*spanResult.innerHTML = 'Não encontrado';
-    arrayFruits.forEach(searchFruits);*/
-    if(arrayFruits.indexOf(inputFruit.value) !== -1) {
-        spanResult.innerHTML = 'Fruta Encontrada!';
-    } else {
-        spanResult.innerHTML = 'Fruta Não Encontrada!';
+function search (e) {
+    console.log(e);
+    if(inputFruit.value === e){
+        document.querySelector(".resultSearch").textContent = "Encontrada";
     }
 }
 
-btnSearchFruit.addEventListener('click', clickSearchFruits);
+function searchFruit () {
+    document.querySelector(".resultSearch").textContent = "Não Encontrada";
+    arrayFruits.forEach(search);
+}
+
+button.addEventListener("click",searchFruit);
+
