@@ -40,3 +40,7 @@ const studentsList = [
         grade: 8.8
     }
 ];
+
+studentsList.forEach((item,index) => {
+   console.log(item, index);
+});

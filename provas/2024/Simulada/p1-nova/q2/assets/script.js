@@ -54,3 +54,41 @@ const moviesList = [
         image : "images/batman.jpg"
     }
 ];
+
+const movieListDiv = document.querySelector(".movie-list");
+moviesList.forEach((element) => {
+    const newMovie = document.createElement("div");
+    newMovie.setAttribute("class","movie-card");
+    newMovie.innerHTML = `
+        <img src="${element.image}" title="${element.title}">
+        <div class="movie-title">${element.title}</div>
+        <div class="movie-genre">${element.genre}</div>
+        <div class="movie-year">${element.year}</div>
+    `;
+    movieListDiv.appendChild(newMovie);
+});
+
+const selectGenre = document.querySelector("#genre-select");
+
+selectGenre.addEventListener("change",() => {
+    console.log(selectGenre.value);
+    movieListDiv.innerHTML = "";
+    moviesList.forEach((element) => {
+        if(element.genre === selectGenre.value || selectGenre.value === "Todos") {
+            const newMovie = document.createElement("div");
+            newMovie.setAttribute("class","movie-card");
+            newMovie.innerHTML = `
+            <img src="${element.image}" title="${element.title}">
+            <div class="movie-title">${element.title}</div>
+            <div class="movie-genre">${element.genre}</div>
+            <div class="movie-year">${element.year}</div>
+        `;
+            movieListDiv.appendChild(newMovie);
+        }
+    });
+});
+
+
+
+
+
