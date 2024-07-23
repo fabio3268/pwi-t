@@ -10,3 +10,17 @@ divList.forEach((element,index) => {
     element.textContent = " - " + element.textContent;
     //console.log(element.id);
 });
+
+document.querySelector("#buttonBlue").addEventListener("click", () => {
+    divList.forEach((element) => {
+        console.log(element);
+        element.classList = "blue";
+    });
+});
+
+document.querySelector("#buttonRed").addEventListener("click", () => {
+    divList.forEach((element) => {
+        console.log(element);
+        element.classList = "red";
+    });
+});
