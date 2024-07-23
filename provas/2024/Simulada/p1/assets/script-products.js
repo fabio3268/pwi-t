@@ -32,3 +32,13 @@ let products = [
         image: "assets/images/image08.jpeg",
     }
 ];
+
+const divProducts = document.querySelector(".products");
+products.forEach((product, index) => {
+    const divProduct = document.createElement("div");
+    divProduct.setAttribute("class","product-item");
+    divProduct.innerHTML = `
+         <img src="${product.image}" alt="${product.name}" class="product-image">
+         <p>${product.name}</p>`;
+    divProducts.appendChild(divProduct);
+});
