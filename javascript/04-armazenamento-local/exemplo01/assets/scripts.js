@@ -1,43 +1,43 @@
-const itemList = [
+const studentsList = [
     {
-        description: "Computador",
-        price: 5000.00
+        name: "John",
+        grade: 8.5
     },
     {
-        description: "Notebook",
-        price: 3500.00
+        name: "Alice",
+        grade: 9.2
     },
     {
-        description: "Monitor",
-        price: 1000.00
+        name: "Mike",
+        grade: 7.8
     },
     {
-        description: "Teclado",
-        price: 100.00
+        name: "Emily",
+        grade: 9.0
     },
     {
-        description: "Mouse",
-        price: 50.00
+        name: "Daniel",
+        grade: 8.7
     },
     {
-        description: "Impressora",
-        price: 300.00
+        name: "Sarah",
+        grade: 9.5
     },
     {
-        description: "Roteador",
-        price: 200.00
+        name: "Alex",
+        grade: 8.1
     },
     {
-        description: "Headset",
-        price: 250.00
+        name: "Olivia",
+        grade: 8.9
     },
     {
-        description: "Pen Drive",
-        price: 30.00
+        name: "William",
+        grade: 9.3
     },
     {
-        description: "Câmera Webcam",
-        price: 150.00
+        name: "Sophia",
+        grade: 8.8
     }
 ];
 
