@@ -44,4 +44,8 @@ const studentsList = [
 localStorage.setItem("name","Fábio Santos");
 localStorage.setItem("age", "48");
 
+const studentsListJSON = JSON.stringify(studentsList);
+console.log(studentsListJSON);
+localStorage.setItem("studentsList",studentsListJSON);
+
 
