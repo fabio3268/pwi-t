@@ -41,5 +41,7 @@ const studentsList = [
     }
 ];
 
+localStorage.setItem("name","Fábio Santos");
+localStorage.setItem("age", "48");
 
 
