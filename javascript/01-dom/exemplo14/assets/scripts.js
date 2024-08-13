@@ -20,3 +20,22 @@ divList.forEach((element,index) => {
     `;
 });
 
+
+divList.forEach((element) => {
+
+    element.addEventListener("mouseenter",() => {
+        element.classList.add("active");
+    });
+
+    element.addEventListener("mouseout",() => {
+        element.classList.remove("active");
+    });
+
+});
+
+
+
+
+
+
+

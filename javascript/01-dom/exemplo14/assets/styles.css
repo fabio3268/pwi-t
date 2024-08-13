@@ -38,7 +38,7 @@ h1 {
 }
 
 .box.active {
-    background-color: #b15b5b;
+    background-color: #da4a4a;
     border-color: #333333;
     box-shadow: none;
 }

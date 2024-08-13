@@ -43,18 +43,3 @@ const itemList = [
 
 
 
-
-
-localStorage.setItem('chave1', 'valor1');
-localStorage.setItem('chave2', 'valor2');
-
-//localStorage.removeItem("chave1");
-localStorage.clear();
-const chave01 = localStorage.getItem('chave1');
-const chave02 = localStorage.getItem('chave2');
-
-const itensString =  JSON.stringify(itemList);
-console.log(itensString);
-const itensListObj = JSON.parse(itensString);
-
-console.log(itensListObj);
