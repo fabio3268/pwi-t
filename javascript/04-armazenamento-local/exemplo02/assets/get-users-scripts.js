@@ -13,6 +13,7 @@ function showListUsers () {
         <span class="name">${user.name}</span>
         <span class="email">${user.email}</span>
         <span class="remove"><button userIndex="${index}">X</button></span>
+        <span class="update"><button class="update">A</button></span>
         `;
         listUsersContainer.appendChild(userDiv);
     });
@@ -38,3 +39,7 @@ function eventsUsers () {
 showListUsers();
 // Adiciona os eventos de click nos botões de remover
 eventsUsers();
+
+document.querySelector(".close").addEventListener('click', () => {
+    document.querySelector("#userModal").classList.toggle("modal");
+});
