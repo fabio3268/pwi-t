@@ -8,8 +8,14 @@ LPWPHPClassName("?? - Formuários e filtros");
  */
 LPWClassSession("request", __LINE__);
 
+$method = "post";
+
+$name = $_POST["name"] ?? "";
+$email = $_POST["email"] ?? "";
 
 include __DIR__ . "/form.php";
+
+//var_dump(__DIR__ . "/form.php");
 
 /*
  * [ post ] $_POST | INPUT_POST | filter_input | filter_var

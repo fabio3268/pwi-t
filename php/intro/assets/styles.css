@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    background-image: url('../assets/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-button {
+    display: block;
+    margin: 10px 0;
+    padding: 15px 30px;
+    text-decoration: none;
+    color: #fff;
+    background-color: rgba(0, 123, 255, 0.8);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.menu-button:hover {
+    background-color: rgba(0, 86, 179, 0.8); /* Add transparency */
+}
