@@ -1,0 +1,23 @@
+/* Estilo da seção bitcoin */
+section.bitcoin {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    margin: 20px auto;
+    font-family: 'Arial', sans-serif;
+}
+
+section.bitcoin h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+section.bitcoin p {
+    font-size: 18px;
+    color: #007bff;
+    margin: 0;
+}
