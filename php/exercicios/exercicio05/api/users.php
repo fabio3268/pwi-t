@@ -8,3 +8,19 @@ $users = [
     ["name" => "José", "email" => "jose@gmail.com", "password" => "123456"]
 ];
 
+
+$response = [
+    "type" => "error",
+    "message" => "E-mail não cadastrado!"
+];
+
+$response = [
+    "type" => "error",
+    "message" => "Senha Inválida!"
+];
+
+$response = [
+    "type" => "success",
+    "message" => "Olá, Fulano! Bem-vindo(a)!",
+    "user" => ["name" => "João", "email" => "joao@gmail.com", "password" => "123456"]
+];
