@@ -22,5 +22,5 @@ $response = [
 $response = [
     "type" => "success",
     "message" => "Olá, Fulano! Bem-vindo(a)!",
-    "user" => ["name" => "João", "email" => "joao@gmail.com", "password" => "123456"]
+    "data" => ["name" => "João", "email" => "joao@gmail.com", "password" => "123456"]
 ];
