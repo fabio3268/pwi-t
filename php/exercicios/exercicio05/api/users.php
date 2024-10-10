@@ -24,4 +24,4 @@ $response = [
     "data" => ["name" => "João", "email" => "joao@gmail.com", "password" => "123456"]
 ];
 
-echo json_encode($response);
+echo json_encode($response, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
