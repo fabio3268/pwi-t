@@ -1,13 +1,20 @@
-<?php
+### Exercício 05
 
-header('Content-Type: application/json');
+## Script `index.html` 
+Contem o formulário de login
 
+## Script `api/login.php` 
+Contem a lógica de login
+
+```php
 $users = [
     ["name" => "João", "email" => "joao@gmail.com", "password" => "123456"],
     ["name" => "Maria", "email" => "maria@gmaikl.com", "password" => "123456"],
     ["name" => "José", "email" => "jose@gmail.com", "password" => "123456"]
 ];
-
+```
+Respostas:
+```php
 $response = [
     "type" => "error",
     "message" => "E-mail não cadastrado!"
@@ -24,4 +31,7 @@ $response = [
     "data" => ["name" => "João", "email" => "joao@gmail.com", "password" => "123456"]
 ];
 
-echo json_encode($response);
+```
+
+## Script `assets/login.js`
+
