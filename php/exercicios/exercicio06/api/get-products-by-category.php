@@ -17,3 +17,22 @@ $products = [
     ["id" => 14, "name" => "Cadeira", "category_id" => 5, "price" => 150.00],
     ["id" => 15, "name" => "Computador", "category_id" => 5, "price" => 2500.00]
 ];
+
+
+// Respostas possíveis
+
+// retorna uma mensagem de erro se não existir nenhum produto com o idCategory informado
+
+$response = [
+    "type" => "error",
+    "message" => "Não há produtos cadastrados com a categoria informada!"
+];
+
+// retorna o array dos produtos com o idCategory informado
+
+$response = [
+    "type" => "success",
+    "data" => [["id" => 1, "name" => "Sofá", "category_id" => 1, "price" => 1500.00],
+        ["id" => 2, "name" => "Mesa de Centro", "category_id" => 1, "price" => 300.00],
+        ["id" => 3, "name" => "Poltrona", "category_id" => 1, "price" => 700.00]]
+];
