@@ -1,5 +1,7 @@
 <?php
 
+$category_id = $_GET["category_id"] ?? null;
+
 $products = [
     ["id" => 1, "name" => "Sofá", "category_id" => 1, "price" => 1500.00],
     ["id" => 2, "name" => "Mesa de Centro", "category_id" => 1, "price" => 300.00],
@@ -17,7 +19,6 @@ $products = [
     ["id" => 14, "name" => "Cadeira", "category_id" => 5, "price" => 150.00],
     ["id" => 15, "name" => "Computador", "category_id" => 5, "price" => 2500.00]
 ];
-
 
 // Respostas possíveis
 
