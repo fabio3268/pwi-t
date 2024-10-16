@@ -8,7 +8,6 @@ $categories = [
     ["id" => 5, "name" => "Escritório"]
 ];
 
-
 // Respostas possíveis
 
 // retorna uma mensagem de erro se o vetor vazio, somente para exemplificar
