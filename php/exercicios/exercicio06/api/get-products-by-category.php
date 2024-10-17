@@ -2,6 +2,8 @@
 
 $category_id = $_GET["category_id"] ?? null;
 
+//var_dump($category_id);
+
 $products = [
     ["id" => 1, "name" => "Sofá", "category_id" => 1, "price" => 1500.00],
     ["id" => 2, "name" => "Mesa de Centro", "category_id" => 1, "price" => 300.00],
