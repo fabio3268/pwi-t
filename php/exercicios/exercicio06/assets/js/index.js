@@ -13,7 +13,6 @@ document.querySelector("#list-categories").addEventListener("click", (event) => 
     }
 });
 
-console.log();
 fetch("api/get-categories.php", {method: "get"})
     .then((response) => {
         response.json()
@@ -21,7 +20,6 @@ fetch("api/get-categories.php", {method: "get"})
                 console.log(categories.data);
             });
     });
-
 
 // URLSearchParams
 const params = {
