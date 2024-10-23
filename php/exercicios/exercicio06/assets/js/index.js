@@ -22,8 +22,17 @@ fetch("api/get-categories.php", {method: "get"})
     });
 
 // URLSearchParams
-const params = {
-    search : "Mesa de Centro"
-}
-const urlParams =  new URLSearchParams(params);
-console.log(urlParams.toString());
+
+const formSearch = document.querySelector(".search-form");
+const inputSearch = document.querySelector("#search-product");
+
+formSearch.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const params = {
+        search : inputSearch.value
+    }
+    const urlParams =  new URLSearchParams(params);
+    const url = `api/get-product-by-name.php?${urlParams.toString()}`;
+    //console.log(url);
+});
+
