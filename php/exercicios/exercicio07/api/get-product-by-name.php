@@ -1,3 +1,1 @@
 <?php
-
-require "products.php";
