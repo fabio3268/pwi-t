@@ -1,8 +1,8 @@
 <?php
 
-    $host = "localhost";
+    $host = "mysql";
     $user = "root";
-    $password = "";
+    $password = "asdf1234";
     $database = "db_furniture_store";
     $options = [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,

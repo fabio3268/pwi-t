@@ -125,3 +125,45 @@ footer {
 .search-form button:hover {
     background-color: #0056b3;
 }
+
+/* Estilo do formulário de inserção de produtos */
+#form-product-insert {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+#form-product-insert label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#form-product-insert input[type="text"],
+#form-product-insert input[type="number"],
+#form-product-insert select {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#form-product-insert button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#form-product-insert button:hover {
+    background-color: #0056b3;
+}
