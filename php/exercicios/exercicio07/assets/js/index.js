@@ -1,5 +1,3 @@
-console.log("OI");
-
 document.querySelector("#list-categories").addEventListener("click", (event) => {
     if(event.target.tagName === "A") {
         const categoryId = event.target.getAttribute("id-category");
@@ -7,7 +5,7 @@ document.querySelector("#list-categories").addEventListener("click", (event) => 
             .then((response) => {
                 response.json()
                     .then((products) => {
-                        console.log(products.data);
+                        //console.log(products.data);
                     });
             });
     }
@@ -17,7 +15,7 @@ fetch("api/get-categories.php", {method: "get"})
     .then((response) => {
         response.json()
             .then((categories) => {
-                console.log(categories.data);
+                //console.log(categories.data);
             });
     });
 
