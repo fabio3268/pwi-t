@@ -1,9 +1,25 @@
 <?php
 
+require "connection.php";
+
 $product = $_POST ?? null;
 
-$query = "INSERT INTO products VALUES (NULL, 1, 'Cadeira', 1000)";
+$query = "INSERT INTO products VALUES (NULL, :category_id, :name, :price)";
 
-echo json_encode($product);
+$stmt = $conn->prepare($query);
+$stmt->bindParam("category_id", $product["category"]);
+$stmt->bindParam("name",$product["name"]);
+$stmt->bindParam("price",$product["price"]);
+$stmt->execute();
+
+if($stmt->rowCount() == 1) {
+    $response = [
+        "type" => "success",
+        "message" => "Produto cadastrado com sucesso!"
+    ];
+    echo json_encode($response);
+}
+
+
 
 
