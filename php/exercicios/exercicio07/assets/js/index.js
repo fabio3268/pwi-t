@@ -1,3 +1,4 @@
+const listProducts = document.querySelector("#list-products");
 document.querySelector("#list-categories").addEventListener("click", (event) => {
     if(event.target.tagName === "A") {
         const categoryId = event.target.getAttribute("id-category");
@@ -5,17 +6,30 @@ document.querySelector("#list-categories").addEventListener("click", (event) => 
             .then((response) => {
                 response.json()
                     .then((products) => {
-                        //console.log(products.data);
+                        console.log(products.data);
+                        listProducts.innerHTML = "";
+                        products.data.forEach((product) => {
+                            const liProduct = document.createElement("li");
+                            liProduct.textContent = `Id: ${product.id}, Name: ${product.name}, Price: R$ ${product.price}`;
+                            listProducts.appendChild(liProduct);
+                        });
                     });
             });
     }
 });
+
+const selectCategories = document.querySelector("#list-categories");
 
 fetch("api/get-categories.php", {method: "get"})
     .then((response) => {
         response.json()
             .then((categories) => {
                 //console.log(categories.data);
+                categories.data.forEach((categoy) => {
+                    const li = document.createElement("li");
+                    li.innerHTML = `<a href="#" id-category="${categoy.id}">${categoy.name}</a>`;
+                    selectCategories.appendChild(li);
+                });
             });
     });
 
@@ -31,5 +45,12 @@ formSearch.addEventListener("submit", (e) => {
     }
     const urlParams =  new URLSearchParams(params);
     const url = `api/get-product-by-name.php?${urlParams.toString()}`;
-    //console.log(url);
+    console.log(url);
+    fetch(url)
+        .then((response) => {
+            response.json()
+                .then((products) => {
+                    console.log(products);
+                });
+        });
 });

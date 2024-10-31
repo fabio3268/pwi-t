@@ -167,3 +167,83 @@ footer {
 #form-product-insert button:hover {
     background-color: #0056b3;
 }
+
+/* Estilo do formulário de registro de usuário */
+#form-user-register {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+#form-user-register label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#form-user-register input[type="text"] {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#form-user-register button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#form-user-register button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo do formulário de login de usuário */
+#form-user-login {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+#form-user-login label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#form-user-login input[type="text"] {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#form-user-login button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#form-user-login button:hover {
+    background-color: #0056b3;
+}
