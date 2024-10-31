@@ -5,6 +5,15 @@
 
 $user = $_POST ?? null;
 
+/*$response = [
+    "password" => $user["password"],
+    "hashDefault" => password_hash($user["password"], PASSWORD_DEFAULT),
+    "hashArgon" => password_hash($user["password"], PASSWORD_ARGON2I)
+];
+
+echo json_encode($response);
+exit;*/
+
 if(in_array("", $user)) {
     $response = [
         "type" => "error",
@@ -45,8 +54,11 @@ $query = "INSERT INTO users (name, email, password)
 $stmt = $conn->prepare($query);
 $stmt->bindParam("name", $user["name"]);
 $stmt->bindParam("email", $user["email"]);
-$stmt->bindParam("password", $user["password"]);
+$passwordHash = password_hash($user["password"], PASSWORD_DEFAULT);
+$stmt->bindParam("password", $passwordHash);
 $stmt->execute();
+
+unset($user["password"]);
 
 $response = [
     "type" => "success",
