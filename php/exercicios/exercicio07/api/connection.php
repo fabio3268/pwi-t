@@ -1,19 +1,19 @@
 <?php
 
     $host = "mysql";
-    $user = "root";
-    $password = "asdf1234";
+    $userConn = "root";
+    $passwordConn = "asdf1234";
     $database = "db_furniture_store";
-    $options = [
+    $optionsConn = [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
     ];
 
     $conn = new PDO(
         "mysql:host=$host;dbname=$database",
-        $user,
-        $password,
-        $options
+        $userConn,
+        $passwordConn,
+        $optionsConn
     );
 
     
