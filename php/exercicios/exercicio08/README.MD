@@ -14,4 +14,6 @@ Este exercício consiste em criar uma página web que exibe uma lista de filmes 
 ## Funcionalidades
 
 1. **Exibição de Filmes**: A página exibe uma lista de filmes, cada um em um card contendo a imagem, título, gênero e ano do filme.
+- `api/get-categories.php`: Retorna um array de objetos com os gêneros dos filmes.
 2. **Filtragem por Gênero**: A página possui um dropdown que permite filtrar os filmes exibidos por gênero. Se a opção Todos for selecionada, todos os filmes serão exibidos. Caso contrário, apenas os filmes do gênero selecionado serão exibidos.
+- `api/get-movies-by-genre.php`: Recebe o ID de um gênero como parâmetro e retorna um array de objetos com os filmes desse gênero.
