@@ -6,6 +6,7 @@ Este exercício consiste em criar uma página web que exibe uma lista de filmes 
 
 ## Estrutura do Projeto
 
+- `db/db.sql`: Arquivo SQL que contém a estrutura da tabela `movies` e alguns dados de exemplo.
 - `index.html`: Arquivo principal que contém a estrutura HTML da página.
 - `assets/styles.css`: Arquivo CSS que contém os estilos da página.
 - `assets/scripts.js`: Arquivo JavaScript que contém a lógica de filtragem dos filmes.

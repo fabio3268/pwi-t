@@ -17,5 +17,4 @@ $response = [
 
 echo json_encode($response);
 
-
 // password_verify();
