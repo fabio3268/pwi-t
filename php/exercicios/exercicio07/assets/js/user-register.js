@@ -30,14 +30,3 @@ formUserLogin.addEventListener("submit", (e) => {
                 });
         });
 });
-
-document.querySelector("#get-session").addEventListener("click", () => {
-    console.log("GET SESSION");
-    fetch("api/users/user-session.php")
-        .then((response) => {
-            response.json()
-                .then((user) => {
-                    console.log(user);
-                });
-        });
-});
