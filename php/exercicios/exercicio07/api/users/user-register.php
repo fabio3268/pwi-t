@@ -1,18 +1,6 @@
 <?php
 
-// password_hash("rasmuslerdorf", PASSWORD_DEFAULT);
-// password_hash('rasmuslerdorf', PASSWORD_ARGON2I);
-
 $user = $_POST ?? null;
-
-/*$response = [
-    "password" => $user["password"],
-    "hashDefault" => password_hash($user["password"], PASSWORD_DEFAULT),
-    "hashArgon" => password_hash($user["password"], PASSWORD_ARGON2I)
-];
-
-echo json_encode($response);
-exit;*/
 
 if(in_array("", $user)) {
     $response = [
