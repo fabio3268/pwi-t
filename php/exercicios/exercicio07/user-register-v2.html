@@ -1,0 +1,49 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login e Cadastro</title>
+    <link rel="stylesheet" href="assets/css/register.css">
+    <script src="assets/js/register.js" async></script>
+</head>
+<body>
+<div class="container">
+    <div class="tabs">
+        <div class="tab active" data-tab="login">Login</div>
+        <div class="tab" data-tab="register">Cadastro</div>
+    </div>
+
+    <div class="form-container">
+        <form id="loginForm" class="form active">
+            <div class="form-group">
+                <label for="loginEmail">Email</label>
+                <input type="email" id="loginEmail" name="email">
+            </div>
+            <div class="form-group">
+                <label for="loginPassword">Senha</label>
+                <input type="password" id="loginPassword" name="password">
+            </div>
+            <button type="submit">Entrar</button>
+        </form>
+
+        <form id="registerForm" class="form">
+            <div class="form-group">
+                <label for="registerName">Nome</label>
+                <input type="text" id="registerName" name="name">
+            </div>
+            <div class="form-group">
+                <label for="registerEmail">Email</label>
+                <input type="email" id="registerEmail" name="email">
+            </div>
+            <div class="form-group">
+                <label for="registerPassword">Senha</label>
+                <input type="password" id="registerPassword" name="password">
+            </div>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
