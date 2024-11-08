@@ -1,20 +1,57 @@
 <?php
 
-session_start();
+$user = $_POST ?? null;
 
-$_SESSION["user"] = [
-    "id" => 1,
-    "name" => "Fábio Luís da Silva Santos",
-    "email" => "fabiosantos@ifsul.edu.br"
-];
+if(in_array("", $user)) {
+    $response = [
+        "type" => "error",
+        "message" => "Insira todos os dados"
+    ];
+    echo json_encode($response);
+    exit;
+}
 
-setcookie("user", json_encode($_SESSION["user"]), time() + 3600, "/");
+if(!filter_var($user["email"], FILTER_VALIDATE_EMAIL)){
+    $response = [
+        "type" => "error",
+        "message" => "Digite um e-mail válido"
+    ];
+    echo json_encode($response);
+    exit;
+}
 
+require "../connection.php";
+
+$query = "SELECT * FROM users WHERE email = :email";
+$stmt = $conn->prepare($query);
+$stmt->bindParam("email", $user["email"]);
+$stmt->execute();
+
+if($stmt->rowCount() == 0) {
+    $response = [
+        "type" => "error",
+        "message" => "E-mail não cadastrado!"
+    ];
+    echo json_encode($response);
+    exit;
+}
+
+$userAuth = $stmt->fetch();
+if(!password_verify($user["password"], $userAuth->password)){
+    $response = [
+        "type" => "error",
+        "message" => "Senha inválida!"
+    ];
+    echo json_encode($response);
+    exit;
+}
+
+unset($userAuth->password);
+unset($userAuth->photo);
 $response = [
-    "session" => $_SESSION["user"],
-    "cookie" => $_COOKIE["user"]
+    "type" => "success",
+    "message" => "Usuário autenticado!",
+    "data" => $userAuth
 ];
 
 echo json_encode($response);
-
-// password_verify();
