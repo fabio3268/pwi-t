@@ -1,13 +1,4 @@
-function showToast(message, type) {
-    const toast = document.querySelector('.toast');
-    toast.textContent = message;
-    toast.className = `toast ${type}`;
-    toast.style.display = 'block';
-
-    setTimeout(() => {
-        toast.style.display = 'none';
-    }, 3000);
-}
+import { showToast } from "./functions.js";
 
 fetch("api/users/user-get.php", {
     method: "GET"
@@ -29,7 +20,6 @@ fetch("api/users/user-get.php", {
         }
     });
 });
-
 
 const formPhoto = document.querySelector('#form-photo');
 const formProfile = document.querySelector('#form-profile');
