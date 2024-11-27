@@ -1,17 +1,25 @@
-console.log("ludif");
+function showToast(message, type) {
+    const toast = document.querySelector('.toast');
+    toast.textContent = message;
+    toast.className = `toast ${type}`;
+    toast.style.display = 'block';
+
+    setTimeout(() => {
+        toast.style.display = 'none';
+    }, 3000);
+}
 
 fetch("api/users/user-get.php", {
     method: "GET"
 }).then(response => {
     response.json().then(userAuth => {
-        console.log(userAuth);
         if(userAuth.type == "success") {
             document.querySelector('#name').value = userAuth.data.name;
             document.querySelector('#email').value = userAuth.data.email;
             document.querySelector('#address').value = userAuth.data.address;
-        }
-        if(userAuth.data.photo) {
-            document.querySelector('#user-photo').src = `storage/${userAuth.data.photo}`;
+            if(userAuth.data.photo) {
+                document.querySelector('#user-photo').src = `storage/${userAuth.data.photo}`;
+            }
         }
     });
 });
@@ -27,6 +35,7 @@ formPhoto.addEventListener('submit', async (event) => {
         body: new FormData(formPhoto)
     }).then(response => response.json());
     console.log(data.photo);
+    showToast(data.message, data.type);
     if(data.type == "success" ) {
         document.querySelector('#user-photo').src = `storage/${data.photo}`;
     }
@@ -39,4 +48,5 @@ formProfile.addEventListener('submit', async (event) => {
         body: new FormData(formProfile)
     }).then(response => response.json());
     console.log(user);
+    showToast(user.message, user.type);
 });
