@@ -13,6 +13,12 @@ fetch("api/users/user-get.php", {
     method: "GET"
 }).then(response => {
     response.json().then(userAuth => {
+        if(userAuth.type == "error") {
+            showToast(userAuth.message, userAuth.type);
+            setTimeout(() => {
+                location.href = 'login.html';
+            }, 3000);
+        }
         if(userAuth.type == "success") {
             document.querySelector('#name').value = userAuth.data.name;
             document.querySelector('#email').value = userAuth.data.email;

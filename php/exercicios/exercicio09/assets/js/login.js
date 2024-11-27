@@ -51,8 +51,13 @@ formUserLogin.addEventListener("submit", (e) => {
         .then((response) => {
             response.json()
                 .then((user) => {
-                    console.log(user);
+                    console.log("aqui");
                     showToast(user.message, user.type);
+                    if(user.type == "success") {
+                        setTimeout(() => {
+                            location.href = 'profile.html';
+                        }, 3000);
+                    }
                 });
         });
 });
