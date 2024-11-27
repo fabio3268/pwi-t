@@ -55,6 +55,7 @@ if (!in_array($fileExtension, $allowedFileTypes)) {
 $tmpFile = $_FILES["photo"]["tmp_name"];
 $photoName = md5(microtime()) . "." . $fileExtension;
 $targetFile = "../../storage/" . $photoName;
+
 if (move_uploaded_file($tmpFile, $targetFile)) {
     // Atualizar o banco de dados com a foto do usuário
     $query = "UPDATE users SET photo = :photo WHERE id = :id";
