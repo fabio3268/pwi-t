@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $user = $_POST ?? null;
 
 if(in_array("", $user)) {
@@ -45,6 +47,15 @@ if(!password_verify($user["password"], $userAuth->password)){
     echo json_encode($response);
     exit;
 }
+
+// cria a sessão
+$_SESSION["userAuth"] = [
+    "id" => $userAuth->id,
+    "name" => $userAuth->name
+];
+
+// cria o cookie
+setcookie("userAuth", 1, time() + 60 * 60, "/");
 
 unset($userAuth->password);
 unset($userAuth->photo);

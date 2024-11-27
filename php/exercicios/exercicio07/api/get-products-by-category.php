@@ -1,8 +1,18 @@
 <?php
-
+session_start();
 require "connection.php";
 
 $categoryId = $_GET["category_id"] ?? NULL;
+
+// se o script necessitar de autenticação
+if(!isset($_SESSION["userAuth"]) || !isset($_COOKIE["userAuth"])){
+    $response = [
+        "type" => "error",
+        "message" => "Você não deveria estar aqui!"
+    ];
+    echo json_encode($response);
+    exit;
+}
 
 if(!$categoryId) {
     $response = [

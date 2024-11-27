@@ -6,13 +6,17 @@ document.querySelector("#list-categories").addEventListener("click", (event) => 
             .then((response) => {
                 response.json()
                     .then((products) => {
-                        console.log(products.data);
-                        listProducts.innerHTML = "";
-                        products.data.forEach((product) => {
-                            const liProduct = document.createElement("li");
-                            liProduct.textContent = `Id: ${product.id}, Name: ${product.name}, Price: R$ ${product.price}`;
-                            listProducts.appendChild(liProduct);
-                        });
+                        console.log(products);
+                        if(products.type === 'error') {
+                            console.log(products.message);
+                        } else {
+                            listProducts.innerHTML = "";
+                            products.data.forEach((product) => {
+                                const liProduct = document.createElement("li");
+                                liProduct.textContent = `Id: ${product.id}, Name: ${product.name}, Price: R$ ${product.price}`;
+                                listProducts.appendChild(liProduct);
+                            });
+                        }
                     });
             });
     }
