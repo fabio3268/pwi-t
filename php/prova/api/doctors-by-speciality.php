@@ -22,7 +22,7 @@ if(!is_numeric($specialtyId)) {
     exit;
 }
 
-$query = "SELECT doctors.id, doctors.name, doctors.crm, specialities.name as specialty 
+$query = "SELECT doctors.id, doctors.name, doctors.crm, specialities.name as specialty, specialities.id as specialty_id
           FROM doctors
           JOIN specialities ON doctors.specialty_id = specialities.id
           WHERE specialty_id = :specialty_id";

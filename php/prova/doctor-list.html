@@ -19,8 +19,8 @@
                 <label for="specialtyFilter">Filtrar por Especialidade:</label>
                 <select id="specialtyFilter" name="specialtyFilter">
                     <!-- Opções de especialidades serão carregadas dinamicamente via JavaScript -->
-                    <option value="Cardiologia">Cardiologia</option>
-                    <option value="Pediatria">Pediatria</option>
+<!--                    <option value="1">Cardiologia</option>-->
+<!--                    <option value="2">Pediatria</option>-->
                 </select>
             </section>
         </header>
@@ -69,21 +69,21 @@
             <button id="closeModal" aria-label="Fechar">&times;</button>
         </header>
         <form id="editDoctorForm">
-            <input type="hidden" id="editDoctorId">
+            <input type="hidden" name="id" id="editDoctorId">
             
             <fieldset>
                 <label for="editName">Nome Completo</label>
-                <input type="text" id="editName">
+                <input type="text" name="name" id="editName">
             </fieldset>
             
             <fieldset>
                 <label for="editCRM">CRM</label>
-                <input type="text" id="editCRM">
+                <input type="text" name="crm" id="editCRM">
             </fieldset>
             
             <fieldset>
                 <label for="editSpecialty">Especialidade</label>
-                <select id="editSpecialty"></select>
+                <select name="specialtyId" id="editSpecialty"></select>
             </fieldset>
             
             <menu>

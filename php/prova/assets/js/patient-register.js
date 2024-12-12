@@ -11,6 +11,16 @@ document.querySelector("h1").addEventListener("click", (event) => {
 const formPatientRegister = document.querySelector("#patientForm");
 formPatientRegister.addEventListener("submit", (event) => {
     event.preventDefault();
-    // restante do código
+
+    fetch("api/patient-insert.php", {
+        method: "POST",
+        body: new FormData(formPatientRegister)
+    })
+        .then((response) => {
+            response.json()
+                .then((data) => {
+                    console.log(data);
+                });
+        });
 
 });
