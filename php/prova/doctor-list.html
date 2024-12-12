@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Médicos</title>
+    <link rel="stylesheet" href="assets/css/doctor-list.css">
+    <script type="module" src="assets/js/doctor-list.js" async></script>
+
+</head>
+<body>
+    <nav>
+        <a href="patient-register.html">Cadastro de Pacientes</a>
+        <a href="doctor-list.html">Lista de Médicos</a>
+    </nav>
+    <main class="container">
+        <header>
+            <h1>Médicos Cadastrados</h1>
+            <section class="filter-section">
+                <label for="specialtyFilter">Filtrar por Especialidade:</label>
+                <select id="specialtyFilter" name="specialtyFilter">
+                    <!-- Opções de especialidades serão carregadas dinamicamente via JavaScript -->
+                    <option value="Cardiologia">Cardiologia</option>
+                    <option value="Pediatria">Pediatria</option>
+                </select>
+            </section>
+        </header>
+
+        <section id="doctorList">
+            <!-- Médicos serão carregados dinamicamente via JavaScript -->
+            <!--<article doctor-id="1" class="doctor-card">
+                <header>
+                    <h2>Dr. Carlos Alberto Silva</h2>
+                    <button class="edit-btn">Editar</button>
+                </header>
+                <section>
+                    <p><strong>CRM:</strong> CRM-SP 12345</p>
+                    <p><strong>Especialidade:</strong> Cardiologia</p>
+                </section>
+            </article>
+
+            <article doctor-id="2" class="doctor-card">
+                <header>
+                    <h2>Dra. Maria Helena Santos</h2>
+                    <button class="edit-btn">Editar</button>
+                </header>
+                <section>
+                    <p><strong>CRM:</strong> CRM-RJ 67890</p>
+                    <p><strong>Especialidade:</strong> Pediatria</p>
+                </section>
+            </article>
+
+            <article doctor-id="3" class="doctor-card">
+                <header>
+                    <h2>Dr. João Pedro Oliveira</h2>
+                    <button class="edit-btn">Editar</button>
+                </header>
+                <section>
+                    <p><strong>CRM:</strong> CRM-MG 54321</p>
+                    <p><strong>Especialidade:</strong> Ortopedia</p>
+                </section>
+            </article>-->
+        </section>
+    </main>
+
+    <!-- Modal de Edição de Médico -->
+    <dialog id="editDoctorModal" class="modal">
+        <header>
+            <h2>Editar Médico</h2>
+            <button id="closeModal" aria-label="Fechar">&times;</button>
+        </header>
+        <form id="editDoctorForm">
+            <input type="hidden" id="editDoctorId">
+            
+            <fieldset>
+                <label for="editName">Nome Completo</label>
+                <input type="text" id="editName">
+            </fieldset>
+            
+            <fieldset>
+                <label for="editCRM">CRM</label>
+                <input type="text" id="editCRM">
+            </fieldset>
+            
+            <fieldset>
+                <label for="editSpecialty">Especialidade</label>
+                <select id="editSpecialty"></select>
+            </fieldset>
+            
+            <menu>
+                <button type="submit">Salvar Alterações</button>
+                <button type="button" id="cancelEdit">Cancelar</button>
+            </menu>
+        </form>
+    </dialog>
+    <div class="toast"></div>
+</body>
+</html>
