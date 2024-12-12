@@ -20,6 +20,7 @@ formPatientRegister.addEventListener("submit", (event) => {
             response.json()
                 .then((data) => {
                     console.log(data);
+                    showToast(data.message, data.type);
                 });
         });
 
